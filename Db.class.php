@@ -57,7 +57,7 @@ class DB
 			try 
 			{
 				# Read settings from INI file, set UTF8
-				$this->pdo = new PDO($dsn, $ettings["dbuser"], $settings["dbpass"], array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+				$this->pdo = new PDO($dsn, $settings["dbuser"], $settings["dbpass"], array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 				
 				# We can now log any exceptions on Fatal error. 
 				$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
