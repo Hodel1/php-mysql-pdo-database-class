@@ -12,8 +12,9 @@
 			
 		    # @void, Default Constructor, Sets the timezone and path of the log files.
 			public function __construct() {
+				global $root;
 				date_default_timezone_set('Europe/Amsterdam');	
-				$this->path  = dirname(__FILE__)  . $this->path;	
+				$this->path  = $root.$this->path;	
 			}
 			
 		   /**
