@@ -1,0 +1,6 @@
+{
+    "name": "JayC89/PHP-MySQL-PDO-Database-Class",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
