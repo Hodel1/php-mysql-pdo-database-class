@@ -53,11 +53,11 @@ class DB
 		private function Connect()
 		{
 			global $settings;
-			$dsn = 'mysql:dbname='.$settings["dbname"].';host='.$settings["dbhost"].'';
+			$dsn = 'mysql:dbname='.$settings["dbName"].';host='.$settings["dbHost"].'';
 			try 
 			{
 				# Read settings from INI file, set UTF8
-				$this->pdo = new PDO($dsn, $settings["dbuser"], $settings["dbpass"], array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+				$this->pdo = new PDO($dsn, $settings["dbUser"], $settings["dbPass"], array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 				
 				# We can now log any exceptions on Fatal error. 
 				$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
