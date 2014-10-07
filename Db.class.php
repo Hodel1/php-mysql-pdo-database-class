@@ -122,7 +122,7 @@ class DB
 			catch(PDOException $e)
 			{
 					# Write into log and display Exception
-					echo $this->ExceptionLog($e->getMessage(), $query );
+					$this->ExceptionLog($e->getMessage(), $query );
 					throw new Exception($e->getMessage());
 			}
 
