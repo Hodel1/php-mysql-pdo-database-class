@@ -123,7 +123,7 @@ class DB
 			{
 					# Write into log and display Exception
 					echo $this->ExceptionLog($e->getMessage(), $query );
-					die();
+					throw new Exception($e->getMessage());
 			}
 
 			# Reset the parameters
