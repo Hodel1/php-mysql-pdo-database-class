@@ -1,5 +1,6 @@
 {
-	"name": "JayC89/PHP-MySQL-PDO-Database-Class",
+	"name": "jayc89/php-mysql-pdo-database-class",
+	"type": "class",
 	"description": "PHP PDO MySQL Wrapper",
     	"keywords": ["pdo", "mysql"],
     	"homepage": "http://github.com/JayC89/php-mysql-pdo-database-class",
