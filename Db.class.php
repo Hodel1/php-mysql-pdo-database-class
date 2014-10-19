@@ -10,6 +10,18 @@
 require("Log.class.php");
 class DB
 {
+	# @var, MySQL Hostname
+	private $hostname = 'localhost';
+
+	# @var, MySQL Database
+	private $database;
+
+	# @var, MySQL Username
+	private $username;
+
+	# @var, MySQL Password
+	private $password;
+
 	# @object, The PDO object
 	private $pdo;
 
@@ -35,10 +47,10 @@ class DB
 	*	2. Connect to database.
 	*	3. Creates the parameter array.
 	*/
-		public function __construct()
+		public function __construct($hostname, $database, $username, $password)
 		{ 			
 			$this->log = new Log();	
-			$this->Connect();
+			$this->Connect($hostname, $database, $username, $password);
 			$this->parameters = array();
 		}
 	
@@ -50,14 +62,14 @@ class DB
 	*	3. Tries to connect to the database.
 	*	4. If connection failed, exception is displayed and a log file gets created.
 	*/
-		private function Connect()
+		private function Connect($hostname, $database, $username, $password)
 		{
 			global $settings;
-			$dsn = 'mysql:dbname='.$settings["dbName"].';host='.$settings["dbHost"].'';
+			$dsn = 'mysql:dbname='.$database.';host='.$hostname;
 			try 
 			{
 				# Read settings from INI file, set UTF8
-				$this->pdo = new PDO($dsn, $settings["dbUser"], $settings["dbPass"], array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+				$this->pdo = new PDO($dsn, $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 				
 				# We can now log any exceptions on Fatal error. 
 				$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -117,7 +129,7 @@ class DB
 				}
 
 				# Execute SQL 
-				$this->succes 	= $this->sQuery->execute();		
+				$this->success = $this->sQuery->execute();		
 			}
 			catch(PDOException $e)
 			{
