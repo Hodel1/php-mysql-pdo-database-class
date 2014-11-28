@@ -135,7 +135,6 @@ class DB
 			{
 					# Write into log and display Exception
 					$this->ExceptionLog($e->getMessage(), $query );
-					throw new Exception($e->getMessage());
 			}
 
 			# Reset the parameters
