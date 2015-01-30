@@ -1,6 +1,10 @@
 PDO Database Class
 ============================
 
+[![Latest Stable Version](https://poser.pugx.org/jayc89/php-mysql-pdo-database-class/v/stable.png)](https://packagist.org/packages/jayc89/php-mysql-pdo-database-class)
+[![Total Downloads](https://poser.pugx.org/jayc89/php-mysql-pdo-database-class/downloads.png)](https://packagist.org/packages/jayc89/php-mysql-pdo-database-class)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jayc89/php-mysql-pdo-database-class/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 A database class for PHP-MySQL which uses the PDO extension.
 
 If you have any questions go to : http://indieteq.com/index/readmore/how-to-prevent-sql-injection-in-php
