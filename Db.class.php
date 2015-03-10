@@ -271,8 +271,8 @@ class DB
 		}
 			# Write into log
 			$this->log->write($message);
-
-		return $exception;
+		throw new Exception($message);
+		#return $exception;
 	}			
 }
 ?>
