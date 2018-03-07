@@ -11,6 +11,7 @@ namespace PDOWrapper;
 
 require("Log.class.php");
 
+use \PDO;
 class DB
 {
 	# @var, MySQL Hostname
