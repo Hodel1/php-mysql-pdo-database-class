@@ -7,9 +7,9 @@
  * @version      0.2ab
  *
  */
-require("Log.class.php");
-
 namespace PDOWrapper;
+
+require("Log.class.php");
 
 class DB
 {
