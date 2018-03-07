@@ -5,6 +5,8 @@
 	* @git 			https://github.com/indieteq/PHP-MySQL-PDO-Database-Class
 	* @version      0.1a
 	*/
+	namespace PDOWrapper;
+
 	class Log {
 			
 		    # @string, Log directory name

@@ -8,6 +8,9 @@
  *
  */
 require("Log.class.php");
+
+namespace PDOWrapper;
+
 class DB
 {
 	# @var, MySQL Hostname
